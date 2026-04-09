@@ -5,7 +5,8 @@ Local LAN Text and Attachment Transfer Assistant
 
 Flutter 框架开发，默认跨平台
 
-官网 :  localoop.freeonetool.org
+官网 :  https://localoop.freeonetool.org
+
 其他端 release包 留意官网
 MAC 和IOS端 暂时未发布release包。
 
