@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package msgentity;
+
+message DeviceReport
+{
+	string ip = 1;
+    bytes aesKey = 2;
+    int32 way = 3;
+	string name = 4;
+	int32 platId = 5; 
+}
+
+message PingPong
+{
+	int64 timestamp = 1;
+}
+
+message ChatMessage
+{
+	string fromIp = 1;
+	string toIp = 2;
+	int32 msgType = 3;
+	int64 msgId = 4;
+	int32 status = 5;
+	string sourcePath = 6;
+	string targetPath = 7;
+	string fileName = 8;
+	int32 fileSize = 9;
+	int64 timestamp = 10;
+	int32 attachCount = 11;
+	bytes content = 12;
+}
+
+message ChatResponse
+{
+	int64 msgId = 1;
+	int32 result = 2;
+	int64 timestamp = 3;
+	string sourcePath = 4;
+	int32 recvLength = 5;
+}
+
+message AttachMessage
+{
+	int64 attachId = 1;
+	int64 msgId = 2;
+	int64 timestamp = 3;
+	int32 lessLength = 4;
+	bytes content = 5;
+}
+
+message AttachResponse
+{
+	int64 attachId = 1;
+	int64 msgId = 2;
+	int64 timestamp = 3;
+	int32 recvLength = 4;
+	int32 result = 5;
+	int64 expectId = 6;
+	int32 handleLen = 7;
+}
